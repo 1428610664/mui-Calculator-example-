@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="Keywords" content="关键字,关键字">
+<meta name="Description" content="描述">
+<title> - 付出不亚于任何人的努力 让优秀成成一种习惯 - </title>
+<link href="css/mui.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+<link rel="stylesheet" href="css/comments.css" />
+<style type="text/css">
+	
+	/*header start*/
+.header{position: fixed;top: 0;left: 0;z-index: 10;display: -webkit-box;display: -ms-flexbox;display: flex;padding: 0 3%;width: 94%;height: 30px;color: #fff;}
+.header:after{ content:"";display:block;width:100%;height:1px;transform:scaleY(.2);position:absolute;bottom:0;right:0;background:#fff;}
+.header .tools{-webkit-flex: 1;-ms-flex: 1;flex: 1;padding: 5px 0 ;font-size: 0;}
+.header .tools span{margin-right: 5px;display: inline-block;height: 20px;line-height: 22px;padding: 0 8px;border-radius: 30px;}
+.header .love{-webkit-flex: 0 0 100px;-ms-flex: 0 0 100px;flex:0 0 100px;line-height:30px;text-align: right;}
+	/*header end*/
+	
+	/*warpper start*/
+.warpper{position: fixed; top: 30px;left:0;bottom:0;width: 100%;}
+.warpper .view{display: none;height: 100%;}
+.warpper .view.on{display: block;}
+
+.v1-slide{display: none;}
+.v1-slide.on{display: block;}
+.v1-showwarpper{height: 135px;}
+.v1-showwarpper .inpbox textarea{padding:8px 2%;width: 96%;height: 84px;background: transparent;border: none;color: #fff;}
+.v1-showwarpper .outbox{padding:0 3%;height: 35px;line-height: 35px;text-align: right;}
+.b1-btn-header{position: relative;padding: 0 3%;height: 35px;line-height: 35px;}
+.b1-btn-header .l_lebel i{margin: 7px 4px;}
+.b1-btn-header .l_lebel i:after{margin: 4px auto;}
+.b1-btn-header:before{content: "";display: block;position: absolute;top: 0;left: 0;width: 100%;height: 1px;background: #fff;-webkit-transform: scaleY(.2);transform: scaleY(.2);}
+.b1-btn-header:after{content: "";display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 1px;background: #fff;-webkit-transform: scaleY(.2);transform: scaleY(.2);}
+.btn-warpper{position:relative;font-size: 0;}
+.btn-warpper .v1-btn{position: relative;display: inline-block;width: 25vw;height: calc(( 100vh - 260px )/4);line-height: calc(( 100vh - 260px )/4);font-size: 15px;text-align: center;}
+.btn-warpper .v1-btn:active{background: #444b51;}
+.btn-warpper .v1-btn.on{background: #464e53;}
+.btn-warpper .v1-btn.on1{color: #464e53;}
+.btn-warpper .v1-btn:before{content: "";display: block;position: absolute;right: 0;top: 0;width: 1px;height: 100%;background: #fff;-webkit-transform: scaleX(.2);transform: scaleX(.2);}
+.btn-warpper .v1-btn:nth-child(4n):before{display: none;}
+.btn-warpper .v1-btn:after{content: "";display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 1px;background: #fff;-webkit-transform: scaleY(.2);transform: scaleY(.2);}
+.btn-warpper .v1-btn:nth-child(n+12):after{display: none;}
+.btn-warpper .v1-btn:nth-last-child(1){position:absolute;bottom: 0;right: 0;height: calc(( 100vh - 260px )/2);line-height: calc(( 100vh - 260px )/2);background: #E56D42;}
+.btn-warpper .v1-btn:nth-last-child(1):active{background: #ea8c68}
+.select-slide{position:absolute;bottom: 0;left: 0;width: 100%;height: 60px;line-height: 60px;}
+.select-slide:before{content: "";position: absolute;top: -1px;left: 0;width: 100%;height: 1px;background: #fff;-webkit-transform: scaleY(.2);transform: scaleY(.2);}
+.select-slide .flex:active{background: #444b51;}
+
+
+.v1-relation .seach-warpper{margin:10px 0;padding: 0 3%;display: -webkit-box;display: -ms-flexbox;display:flex;height: 40px;}
+.v1-relation .seach-warpper .inp-warpper{position: relative;-webkit-flex: 1;-ms-flex: 1;flex: 1;height: 40px;}
+.v1-relation .seach-warpper .inp-warpper:after{content: "";position: absolute;bottom: 0;left: 0;width: 100%; height: 1px;background: #fff;-webkit-transform: scaleY(.2);transform: scaleY(.2);}
+.seach-warpper .inp-warpper input{padding-left: 8px;display: block;border: none;width: 90%;height: 40px;background: transparent;color: #fff;}
+.v1-relation .seach-warpper .seach{-webkit-flex: 0 0 90px;-ms-flex: 0 0 90px;flex:0 0 90px;}
+.seach-warpper .seach button{margin:4px auto;display: block;border: none;width: 70px;height: 32px;background: #E56D42;}
+
+.resul-warpper{padding: 20px 3%;}
+.resul-warpper #reslut1{padding-left: 5%;line-height: 24px;margin-top: 5px;}
+	/*warpper end*/
+	
+	/*v2 start*/
+.view .v2-warpper{height:95%;padding:20px 3% 0;color:#fff;}
+.view .v2-warpper .l_line{line-height:50px;height:50px;font-size: 14px;}
+.view .v2-warpper > .l_line > .l_ltit{width:80px;display:inline-block;text-align:right;}
+.view .v2-warpper .l_line input{padding-left: 8px;display:inline-block;width:calc(80% - 72px);height:30px;background:transparent;border:none;border-bottom:1px solid #E56D42;color:#fff;font-size:18px;}
+.view .v2-warpper .l_line .l_lebel{margin-right:10px;}
+.view .v2-warpper .l_line .l_lebel i{width:18px;height:18px;display:inline-block;border-radius:50%;border:1px solid #ddd;vertical-align:top;margin:14px 5px 0 0 ;}
+.view .v2-warpper .l_line .l_lebel i:after{content:"";display:block;width:10px;height:10px;background:#fff;border-radius:50%;margin:4px auto;}
+.view .v2-warpper .l_line .l_lebel i.on{background:#E56D42;}
+.view .v2-warpper  .v-btn{display:block;color:#fff;font-size:18px;text-align:center;width:100%;background:#E56D42;line-height:45px;margin-top:30px;}
+.view .v2-warpper #benjinbox{overflow: auto;height: calc( 85vh - 300px);}
+.view .v2-warpper #benjinbox .l_line{text-align: center;}
+	/*v2 end*/
+
+.view .v-btn:active{background: #ea8c68;}
+	
+	/*v3 start*/
+.v3-warpper{margin-top: 50px;padding: 0 3%;}
+.v3-warpper .line{line-height:50px;height:50px;color: #fff;font-size: 14px;}
+.v3-warpper .line input{background: transparent;font-size: 18px;border:none;border-bottom:1px solid #E56D42;padding-left: 8px;height:30px;width: calc( 100% - 88px);}
+.v3-warpper .line .l_ltit{width:80px;display:inline-block;text-align:right;}
+.v3-warpper .c3_btn{display:block;color:#fff;font-size:18px;text-align:center;width:100%;background:#E56D42;line-height:45px;margin-top:30px;}
+		
+	/*v4 end*/
+</style>
+</head>
+<body class="b1">
+
+
+	<div class="header">
+		<div class="tools">
+			<span class="b2 fz11">找亲戚</span>
+			<span class=" fz11">房贷</span>
+			<span class=" fz11">时间</span>
+		</div>
+		<div class="love fz11">CH-Z-TY : <span id="loveday"></span></div>
+	</div>
+	
+	<div class="warpper">
+		<div class="view on">
+			<div class="v1-slide on">
+				<div class="v1-showwarpper">
+					<div class="inpbox"><textarea id="input" class="textarea fz15" placeholder="我称呼Ta" readonly></textarea></div>
+					<div class="outbox c  fz15 textarea" id="reslut"></div>
+				</div>
+				<div class="v1-btnwarpper">
+					<div class="b1-btn-header fz14 c">
+						<span class="l_lebel"><i class="on"></i>男</span>
+						<span class="l_lebel"><i></i>女</span>
+					</div>
+					<div class="btn-warpper c group">
+						<div class="v1-btn btn" data-value="爸爸">父</div>
+						<div class="v1-btn btn" data-value="妈妈">母</div>
+						<div class="v1-btn input-button">←</div>
+						<div class="v1-btn input-button">C</div>
+						<div class="v1-btn btn man" data-value="哥哥">兄</div>
+						<div class="v1-btn btn woman" data-value="姐姐">姐</div>
+						<div class="v1-btn btn spouse on1" data-value="老公">夫</div>
+						<div class="v1-btn btn spouse" data-value="老婆">妻</div>
+						<div class="v1-btn btn man" data-value="弟弟">弟</div>
+						<div class="v1-btn btn woman" data-value="妹妹">妹</div>
+						<div class="v1-btn reverse"><-></div>
+						<div class="v1-btn">1</div>
+						<div class="v1-btn btn man" data-value="儿子">子</div>
+						<div class="v1-btn btn woman" data-value="女儿">女</div>
+						<div class="v1-btn">？</div>
+						<div class="v1-btn input-button">=</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="v1-slide">
+				<div class="v1-relation fz14">
+					<div class="seach-warpper">
+						<div class="inp-warpper"><input type="text" id="v1-inp" placeholder="对方的称谓" ></div>
+						<div class="seach"><button id="v1-seach" class="c v-btn">查找</button></div>
+					</div>
+					<div class="resul-warpper c">
+						<p>关系：</p>
+						<p id="reslut1"></p>
+					</div>
+				</div>
+			</div>
+			<div class="select-slide fbox c fz14 b1">
+				<div class="flex c2">称谓</div>
+				<div class="flex">关系</div>
+			</div>
+		</div>
+	
+		<div class="view">
+			<div class="v2-warpper">
+				<div class="l_line">
+					<span class="l_ltit">类别：</span>
+					<span class="l_lebel"><i class="on" id="benxi"></i>等额本息</span>
+					<span class="l_lebel"><i></i>等额本金</span>
+				</div>
+				<div class="l_line"><span class="l_ltit">贷款本金：</span><input type="text" id="totalmoney" />&nbsp;&nbsp;万元</div>
+				<div class="l_line"><span class="l_ltit">贷款年限：</span><font onclick="calc.dai.selWin(this)" data-month="请选择" id="daival">请选择</font id="dresultbox"></div>
+				<div class="l_line"><span class="l_ltit">年利率：</span><input type="text" id="rate" />&nbsp;&nbsp;%</div>
+				<a href="javascript:void(0)" id="l_count" class=" v-btn" onclick="calc.dai.clickCalc()">计算</a>
+				<div class="l_line" id="accrualbox" style="display: none;"><span class="l_ltit">利息款：</span><font id="accrual"></font></div>
+				<div id="benxibox">
+					<div class="l_line"><span class="l_ltit">还款总额：</span><font id="z">0.00</font></div>
+					<div class="l_line"><span class="l_ltit">利息款：</span><font id="x">0.00</font></div>
+					<div class="l_line"><span class="l_ltit">月均还款：</span><font id="y">0.00</font></div>
+				</div>
+				<div id="benjinbox" style="display: none;"></div>
+			</div>
+		</div>
+
+		<div class="view">
+			<div class="v3-warpper">
+				<div class="line"><span class="l_ltit">当前时间：</span><input onclick="page.showPicher(this)" id="nowdate" readonly="readonly" type="text" /></div>
+				<div class="line"><span class="l_ltit">选择时间：</span><input onclick="page.showPicher(this)" id="targetdate" readonly="readonly" type="text" /></div>
+				<div class="line"><span class="l_ltit">天数：</span><input readonly="readonly" id="countdate" type="text" /></div>
+				<a href="javascript:void(0)" class="c3_btn v-btn" onclick="page.coutDate()">计算</a>
+			</div>
+		</div>
+	</div>
+
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/relationship.js"></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/hz_util.js"></script>
+<script type="text/javascript" src="js/mui.picker.min.js"></script>
+<script type="text/javascript">
+	
+	document.addEventListener("plusready",function(){
+		plus.navigator.setStatusBarBackground("#303539");
+		plus.device.setWakelock( true );	//屏幕常亮	
+		
+		setTimeout(function(){
+			plus.navigator.closeSplashscreen();
+		},500);
+	});
+	
+	mui.init();
+	
+	(function(MU) {
+		
+		MU.ready(function() {
+			page.initDate();
+			calc.init();
+			
+			// 时间选择器
+			var opation = {"type":"date"};
+			page.userPicker = new MU.DtPicker(opation);
+			
+			// 年选择器
+			page.userPicker1 = new MU.PopPicker({layer: 1});
+			var userPicker1Data = [];
+			for(var i = 1; i <= 20; i++){
+				userPicker1Data.push({text:i+"年（"+(i*12)+"期）",value:i});
+			}
+			page.userPicker1.setData(userPicker1Data);
+			
+			var first = null;
+			MU.back = function(){
+				if(!first){
+					first = new Date().getTime(); 
+					plus.nativeUI.toast('再按一次退出应用');
+					setTimeout(function(){
+						first = null;
+					},2000);
+				}else{
+					if(new Date().getTime() - first < 2000){  
+						plus.runtime.quit();  
+					}
+				}
+			}
+		});
+	})(mui);
+	
+	window.onload = function(){
+		$(".tools").on("click","span",function(){
+			var i = $(this).index();
+			$(this).addClass("b2").siblings().removeClass("b2");
+			$(".warpper .view").eq(i).addClass("on").siblings().removeClass("on");
+		});
+		
+		$(".select-slide .flex").click(function(){
+			var i = $(this).index();
+			$(this).addClass("c2").siblings().removeClass("c2");
+			$(".v1-slide").eq(i).addClass("on").siblings().removeClass("on");
+		});
+	}
+	
+var page = {
+	userPicker : null,
+	showPicher : function(obj){ 
+		page.userPicker.show(function(items) {
+			console.log("--------选择日期---------"+JSON.stringify(items.value));
+			$(obj).val(items.value);
+			//page.userPicker.dispose();
+		});
+	},
+	initDate : function(){
+		var date = new Date();
+		var y = date.getFullYear(),m = date.getMonth()+1,d = date.getDate();
+		$("#nowdate").val(y+"-"+page.checkTime(m)+"-"+page.checkTime(d));
+		
+		
+		var cur = y+"/"+page.checkTime(m)+"/"+page.checkTime(d);
+		var target= "2016/08/05";
+		var ndate = new Date(cur).getTime(),tdate = new Date(target).getTime();
+		var day = Math.floor(Math.abs((ndate*1 - tdate*1))/(24*60*60*1000));
+		$("#loveday").text(day);
+		
+		
+	},
+	coutDate : function(){
+		var nowdate = $("#nowdate").val(),targetdate = $("#targetdate").val();
+		if(hz_util.isEmpty(targetdate)){
+			plus.nativeUI.toast("请选择时间");
+			return;
+		}
+		var reg = new RegExp("-","g");
+		
+		nowdate = nowdate.replace(reg,"/");
+		targetdate = targetdate.replace(reg,"/");
+		console.log(nowdate+"==============="+targetdate);
+		
+		var ndate = new Date(nowdate).getTime(),tdate = new Date(targetdate).getTime();
+		
+		var day = Math.floor(Math.abs((ndate*1 - tdate*1))/(24*60*60*1000));
+		$("#countdate").val(day);
+	},
+	//小于10补0
+	checkTime : function(i){ 
+		if(i<10){i="0"+i};
+		return i;
+	},
+	
+	/*
+		倒计时算法
+			y : 年 m : 月 d : 日
+			mark ? 传进来时间 : 系统时间;
+			flag ? 传进来时间 - 系统时间 : 系统时间 - 传进来时间;
+	*/
+	countDown : function(y,m,d,mark,flag){
+		var starDate = new Date();
+		//获取年月日
+		var fullYear = starDate.getFullYear(),month = starDate.getMonth(),day1 = starDate.getDate() + 1;
+		//结束时间
+		var endDate = mark ? new Date(y,m-1,d) : new Date(fullYear,month,day1,y,m,d);
+		//剩余毫秒数
+		var time = (flag?endDate.getTime():starDate.getTime()) - (flag?starDate.getTime():endDate.getTime());
+
+		if(time <= 0){
+			return {day:0,hour:0,minute:0,second:0};
+		}
+
+		//毫秒转秒
+		var secDate = time / 1000; 
+		//获取剩余天数,时分秒
+		var day = Math.floor(secDate / 60 / 60 / 24),hour = Math.floor(secDate / 60 / 60 % 24),minute = Math.floor(secDate / 60 % 60),second = Math.ceil(secDate % 60);
+		return {day:day,hour:hour,minute:minute,second:second};
+	}
+}
+	
+	
+	
+
+var calc = {
+	init : function(){
+		$("#head .h_nav .h_nlist").click(function(){
+			var i = $(this).index();
+			$(this).addClass("on").siblings().removeClass("on");
+			$("#contbox .contbox").eq(i).addClass("show").siblings().removeClass("show");
+		});
+		$(".l_line .l_lebel").click(function(){
+			$(this).find("i").addClass("on").parent().siblings().find("i").removeClass("on");
+			var i = $(this).index();
+			if(i == 1){
+				$("#benjinbox,#accrualbox").hide();
+				$("#benxibox").show();
+			}else{
+				$("#benjinbox,#accrualbox").show();
+				$("#benxibox").hide();
+			}
+		});
+	},
+	calcArr : [],
+	calcNum : "",
+	a : function(obj){
+		var num = $(obj).data("txt");
+		this.calcNum += num;
+
+	},
+	//贷款 - 功能
+	dai : {
+		selWin : function(obj){
+			page.userPicker1.show(function(a) {
+	           	calc.dai.selYear(a);
+	        });
+		},
+		selYear : function(obj){
+			$("#daival").text(obj[0].text).attr("data-month",obj[0].value);
+			this.c = obj[0].value;	//期数赋值
+		},
+		c : "请选择",//期数
+		//等额本息算法
+		dCalc : function(a,b,c){	//a:年利率 b:贷款金额 c:期数（多少个月）
+			var y = (b*(a/12)*(Math.pow(1+(a/12),c)))/((Math.pow(1+(a/12),c))-1);	//月支付
+			var z = y*c;	//利息+贷款金额
+			var x = z - b;	//总利息
+			return {x:x,y:y,z:z};	//x:总利息 y:月利率 z:总金+总息
+		},
+		//等额本金算法
+		dCalc1 : function(a,b,c,d){	//a:年利率 b:贷款金额 c:期数（多少个月）d:已归还本金额
+			//(贷款本金÷还款月数)+(贷款本金-已归还本金累计额)×月利率
+			var y = (b/c)+(b-d)*(a/12);//月应付
+			return y;
+		},
+		//点击计算
+		clickCalc : function(){
+			var a = $("#rate").val(),b = $("#totalmoney").val(),c = this.c;
+			var mark = $("#benxi").hasClass("on");
+			if(hz_util.isEmpty(b)){
+				mui.toast("请输入贷款金额！");
+				return;
+			}
+			if(!(!isNaN(b) && b>0)){
+				mui.toast("请输入正确的贷款金额！");
+				return;
+			}
+			if(this.c == "请选择"){
+				mui.toast("请选择贷款年限！");
+				return;
+			}
+			if(hz_util.isEmpty(a)){
+				mui.toast("请输入年利率！");
+				return;
+			}
+			if(!(!isNaN(a) && a>0)){
+				mui.toast("请输入正确的年利率！");
+				return;
+			}
+			if(mark){
+				var json = this.dCalc(a/100,b*10000,c*12);
+				console.log(c);
+				console.log(JSON.stringify(json));
+				for(var key in json){
+					$("#"+key).text(json[key].toFixed(2));
+				}
+			}else{
+				var q = c*12;//总期数
+				var html = "",accrual=0;
+				for(var i = 0;i < q;i++){
+					//a:年利率 b:贷款金额 c:期数（多少个月）d:已归还本金额
+					mm = (this.dCalc1(a/100,b*10000,q,(b*10000/q)*i)).toFixed(2);//月应付
+					accrual += mm - b*10000/q;//总支付利息款
+					html += '<div class="l_line"><span class="l_ltit">第'+(i+1)+'期：</span>'+mm+' -- 已还：'+(((b*10000/q)*(i+1)).toFixed(2))+'</div>';
+				}
+				$("#accrual").text(accrual.toFixed(2));
+				$("#benjinbox").html(html);
+			}
+		}
+	}
+}
+</script>
+</body>
+</html>
